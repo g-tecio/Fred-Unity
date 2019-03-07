@@ -20,7 +20,6 @@ public class ButtonController : MonoBehaviour
     public AudioClip LGreen;
     public AudioClip purple;
     public AudioClip gold;
-
     public AudioClip dRed;
     public AudioClip orange;
     public AudioClip cyan;
@@ -43,7 +42,7 @@ public class ButtonController : MonoBehaviour
     {
         theSprite.color = new Color(theSprite.color.r, theSprite.color.g, theSprite.color.b, 1f);
         //theGM.ColourPressed(thisButtonNumber);
-        theGM.ColourPressed(thisButtonNumber);
+
 
         switch (thisButtonNumber)
         {
@@ -54,6 +53,7 @@ public class ButtonController : MonoBehaviour
                 AudioSource.PlayClipAtPoint(dBlue, new Vector3(5, 1, 2));
 
                 blueButton.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+
                 break;
 
             case 1:
@@ -161,6 +161,9 @@ public class ButtonController : MonoBehaviour
 
     void OnMouseUp()
     {
+
+        theGM.ColourPressed(thisButtonNumber);
+
         theSprite.color = new Color(theSprite.color.r, theSprite.color.g, theSprite.color.b, 0.8f);
 
         blueButtonSelected = Resources.Load<Sprite>("Normal/blueButton");

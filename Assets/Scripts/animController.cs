@@ -63,9 +63,9 @@ public class animController : MonoBehaviour
     IEnumerator ExecuteEnding(float time)
     {
         yield return new WaitForSeconds(time);
-        panelGameOver.gameObject.SetActive(false);
-        panelGrayButtons.gameObject.SetActive(true);
-        panelGrayRestart.gameObject.SetActive(true);
+        panelGameOver.gameObject.SetActive(true);
+        // panelGrayButtons.gameObject.SetActive(true);
+        // panelGrayRestart.gameObject.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
